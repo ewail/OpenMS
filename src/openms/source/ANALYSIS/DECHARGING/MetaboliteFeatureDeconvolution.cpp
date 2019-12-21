@@ -38,6 +38,7 @@
 #include <OpenMS/CHEMISTRY/Element.h>
 #include <OpenMS/CONCEPT/Exception.h>
 #include <OpenMS/CONCEPT/Constants.h>
+#include <OpenMS/DATASTRUCTURES/ChargePair.h>
 #include <OpenMS/FORMAT/TextFile.h>
 #include <OpenMS/FORMAT/FeatureXMLFile.h>
 
@@ -816,7 +817,10 @@ namespace OpenMS
       }
 
     }
-    OPENMS_LOG_INFO << "Agreeing charges: " << agreeing_fcharge << "/" << (aedges * 2) << std::endl;
+
+    {
+      OPENMS_LOG_INFO << "Agreeing charges: " << agreeing_fcharge << "/" << (aedges * 2) << std::endl;
+    }
 
 
     // END DEBUG
